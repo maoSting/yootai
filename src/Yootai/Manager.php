@@ -22,7 +22,7 @@ class Manager
         //获取sku list
         if($action == Config::METHOD_SKU_LIST) {
             $goodsObj = new YooGoods($authTools);
-            if($data['email']) {
+            if(isset($data['email'])) {
                 $return = $goodsObj->getGoodsListByEmail($data['email'], $data['page'], $data['size']);
             } else {
                 $return = $goodsObj->getGoodsList($data['page'], $data['size']);
