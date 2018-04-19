@@ -89,5 +89,23 @@ class Auth
         return $data;
     }
 
+    /**
+     * 验证数据是否合法
+     * @param array $data
+     * @return bool true 合法 false 不合法
+     * @author DQ
+     */
+    public function validate($data = []){
+        if($this->_appKey != $data['app_key']) {
+            return false;
+        }
+        $sign = $data['sign'];
+        unset($data['sign']);
+        $validate = $this->getSignValue($data);
+        if($sign != $validate){
+            return false;
+        }
+        return true;
+    }
 
 }
