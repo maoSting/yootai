@@ -32,7 +32,7 @@ class YooOrder
         $data = [];
         $data['method'] = Config::METHOD_ORDER_CREATE;
         $data['orders'] = $ordersJson;
-        return Client::post(Config::HOST, $this->_auth->getParam($data));
+        return Client::post($this->_auth->getHost(), $this->_auth->getParam($data));
     }
 
 
@@ -46,7 +46,7 @@ class YooOrder
         $data = [];
         $data['method'] = Config::METHOD_ORDER_GET;
         $data['sn'] = $sn;
-        return Client::post(Config::HOST, $this->_auth->getParam($data));
+        return Client::post($this->_auth->getHost(), $this->_auth->getParam($data));
     }
 
     /**
@@ -59,7 +59,7 @@ class YooOrder
         $data = [];
         $data['method'] = Config::METHOD_ORDER_CANCEL;
         $data['sn'] = $snJson;
-        return Client::post(Config::HOST, $this->_auth->getParam($data));
+        return Client::post($this->_auth->getHost(), $this->_auth->getParam($data));
     }
 
 }

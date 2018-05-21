@@ -14,11 +14,13 @@ class Auth
     private static $instance;
     private $_appKey = '';
     private $_appSecret = '';
+    private $_host = '';
 
-    private function __construct($key = '', $sercret = '')
+    private function __construct($key = '', $sercret = '', $host = '')
     {
         $this->_appKey = $key;
         $this->_appSecret = $sercret;
+        $this->_host = $host;
     }
 
     public static function getInstance($key = '', $secret = ''){
@@ -28,6 +30,9 @@ class Auth
         return self::$instance;
     }
 
+    public function getHost(){
+        return $this->_host;
+    }
 
     /**
      * 去掉为空value，key升序，MD5，十六进制大写

@@ -25,7 +25,7 @@ class YooGoods
         $data['method'] = Config::METHOD_SKU_LIST;
         $data['page'] = $page;
         $data['size'] = $size;
-        return Client::post(Config::HOST, $this->_auth->getParam($data));
+        return Client::post($this->_auth->getHost(), $this->_auth->getParam($data));
     }
 
     public function getGoodsListByEmail($email = '', $page = 1, $size = 0){
@@ -33,7 +33,7 @@ class YooGoods
         $data['email'] = $email;
         $data['page'] = $page;
         $data['size'] = $size;
-        return Client::post(Config::HOST, $this->_auth->getParam($data));
+        return Client::post($this->_auth->getHost(), $this->_auth->getParam($data));
     }
 
 
@@ -46,7 +46,7 @@ class YooGoods
     public function getSkuBySn($snJson = ''){
         $param['method'] = Config::METHOD_SKU_GET;
         $param['sns'] = $snJson;
-        return Client::post(Config::HOST, $this->_auth->getParam($param));
+        return Client::post($this->_auth->getHost(), $this->_auth->getParam($param));
     }
 
     /**
@@ -58,7 +58,7 @@ class YooGoods
     public function getStockBySn($snJson = ''){
         $param['method'] = Config::METHOD_STOCK_GET;
         $param['sns'] = $snJson;
-        return Client::post(Config::HOST, $this->_auth->getParam($param));
+        return Client::post($this->_auth->getHost(), $this->_auth->getParam($param));
     }
 
 

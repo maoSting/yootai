@@ -4,8 +4,6 @@ namespace Yootai\Config;
 final class Config
 {
     const SDK_VER = '0.0.1';
-    const HOST = 'http://openapi.test.legovo.com';
-
 
     // 接口参数
     const METHOD_SKU_LIST = 'open.distributor.sku.list';
@@ -14,7 +12,4 @@ final class Config
     const METHOD_ORDER_CREATE = 'open.distributor.order.create';
     const METHOD_ORDER_GET = 'open.distributor.order.get';
     const METHOD_ORDER_CANCEL = 'open.distributor.order.cancel';
-
-
-
 }
