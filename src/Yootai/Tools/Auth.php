@@ -23,9 +23,9 @@ class Auth
         $this->_host = $host;
     }
 
-    public static function getInstance($key = '', $secret = ''){
+    public static function getInstance($key = '', $secret = '', $host = ''){
         if(!self::$instance){
-            self::$instance = new self($key, $secret);
+            self::$instance = new self($key, $secret, $host);
         }
         return self::$instance;
     }
