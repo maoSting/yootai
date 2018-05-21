@@ -17,7 +17,7 @@ use Yootai\Order\YooOrder;
 class Manager
 {
     public static function action($config = [],$action = '', $data){
-        $authTools = Auth::getInstance($config['key'], $config['secret']);
+        $authTools = Auth::getInstance($config['key'], $config['secret'], $config['host']);
         $what = [];
         //获取sku list
         if($action == Config::METHOD_SKU_LIST) {
