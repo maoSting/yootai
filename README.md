@@ -1,4 +1,4 @@
-# Yootai composer composer
+# Yootai composer
 Current version is 0.0.1
 
 
