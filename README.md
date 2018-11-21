@@ -1,11 +1,11 @@
-# Yootai composer 包
+# Yootai composer composer
 Current version is 0.0.1
 
 
-## 运行环境
+## ENV
 php >= 7.0.0
 
-## 使用方法
+## HOW TO USE IT
 
 ```
 use Yootai\Config\Config;
